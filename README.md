@@ -10,10 +10,9 @@ flutter create flutter-books
 pubspec.yaml
 [Link](https://pub.dev/)
 
-# Scaffold
-![image info](./scaffold.png)
-[Link](https://api.flutter.dev/flutter/material/Scaffold-class.html)
-
+# Dipendenza HTTP
+http
+[Link](https://pub.dev/packages/http)
 
 # Dipendenze
 ```
@@ -55,6 +54,10 @@ Libreria per la gestione dei log.
 
 
 # Widget
+## Scaffold
+![image info](./scaffold.png)
+[Link](https://api.flutter.dev/flutter/material/Scaffold-class.html)
+
 ## FutureBuilder
 [Link](https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html)
 
@@ -64,11 +67,15 @@ Libreria per la gestione dei log.
 ## Card
 [Link](https://api.flutter.dev/flutter/material/Card-class.html)
 
+## ListTile
+[Link](https://api.flutter.dev/flutter/material/ListTile-class.html)
+
 ## FloatingActionButton
 [Link](https://api.flutter.dev/flutter/material/FloatingActionButton-class.html)
 
 ## Nuova pagina per inserire un book
 Inserire di nuovo un scaffold
+
 [Link](https://docs.flutter.dev/cookbook/forms/validation)
 per inserire il testo nella label
 decoration: const InputDecoration(labelText: 'Nome'),
@@ -83,11 +90,11 @@ _formKey.currentState!.save();
 [Link](https://docs.flutter.dev/cookbook/navigation/navigation-basics)
 
 ```dart
-Navigator.push(
+ Navigator.push(
   context,
-  MaterialPageRoute(builder: (context) => const InsertBook()),
+  MaterialPageRoute(builder: (context) => const InsertPage()),
 ).then((_) => setState(() {
-  _loadData();
+  loadData(bookRepository);
 }));
 ```
 
